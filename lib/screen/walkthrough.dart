@@ -3,6 +3,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_hakimi/screen/walkthrough.item.dart';
 
+import 'homepage.dart';
+
 class WalkThrough extends StatefulWidget {
   const WalkThrough({Key? key}) : super(key: key);
 
@@ -68,7 +70,10 @@ class _WalkThroughState extends State<WalkThrough> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          TextButton(onPressed: () {}, child: const Text('Skip')),
+          TextButton(
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomePage())),
+              child: const Text('Skip')),
           DotsIndicator(
             onTap: (i) {
               setState(() {
@@ -84,6 +89,10 @@ class _WalkThroughState extends State<WalkThrough> {
           ),
           TextButton(
             onPressed: () {
+              if (index == 2) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage()));
+              }
               setState(() {
                 if (index < 2) index++;
               });
@@ -106,5 +115,6 @@ class _WalkThroughState extends State<WalkThrough> {
     setState(() {
       url = urls;
     });
+    print(url);
   }
 }
