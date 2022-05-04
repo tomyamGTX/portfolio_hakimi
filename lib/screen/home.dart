@@ -40,7 +40,7 @@ class BodyComponent extends StatelessWidget {
         Positioned(
           top: MediaQuery.of(context).size.height * 0.15,
           left: MediaQuery.of(context).size.width * 0.6,
-          right: 100,
+          right: MediaQuery.of(context).size.width * 0.01,
           child: const GFImageOverlay(
             height: 400,
             width: 400,

@@ -71,7 +71,7 @@ class _WalkThroughState extends State<WalkThrough> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           TextButton(
-              onPressed: () => Navigator.push(context,
+              onPressed: () => Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => const HomePage())),
               child: const Text('Skip')),
           DotsIndicator(
@@ -90,7 +90,7 @@ class _WalkThroughState extends State<WalkThrough> {
           TextButton(
             onPressed: () {
               if (index == 2) {
-                Navigator.push(context,
+                Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const HomePage()));
               }
               setState(() {

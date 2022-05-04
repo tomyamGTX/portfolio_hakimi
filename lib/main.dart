@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_hakimi/providers/home.provider.dart';
 import 'package:portfolio_hakimi/screen/splash.screen.dart';
-import 'package:portfolio_hakimi/screen/walkthrough.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
