@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:portfolio_hakimi/screen/user.chat.dart';
 import 'bot.chat.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -52,9 +53,15 @@ class _ChatScreenState extends State<ChatScreen> {
                     return Column(
                       children: [
                         if (_message.isNotEmpty)
-                          BotChat(message: _message, i: index),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: BotChat(message: _message, i: index),
+                          ),
                         if (_response.isNotEmpty && index < _response.length)
-                          UserChat(message: _response, i: index),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: UserChat(message: _response, i: index),
+                          ),
                       ],
                     );
                   },
@@ -148,42 +155,5 @@ class _ChatScreenState extends State<ChatScreen> {
 
     // return the "yyyy-MM-dd HH:mm:ss" format
     return "$year-$month-$day";
-  }
-}
-
-class UserChat extends StatelessWidget {
-  const UserChat({
-    Key? key,
-    required List<String> message,
-    required this.i,
-  })  : _message = message,
-        super(key: key);
-
-  final List<String> _message;
-  final int i;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        const CircleAvatar(
-          backgroundColor: Colors.blue,
-          radius: 18,
-          child: CircleAvatar(
-              radius: 16,
-              backgroundImage: NetworkImage(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5lzrDfBdlpRtaWHCiUb3aN8xY2rgRumXgsDpZISndrsS57hqnFs9qyglW--3Gzw5SJYg&usqp=CAU')),
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        Chip(
-            label: Text(
-          _message[i],
-          maxLines: 3,
-        )),
-      ],
-    );
   }
 }

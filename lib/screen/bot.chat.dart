@@ -46,6 +46,7 @@ class _BotChatState extends State<BotChat> {
                       WavyAnimatedText(
                         '...',
                         textStyle: const TextStyle(
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                         speed: const Duration(milliseconds: 500),
@@ -58,6 +59,7 @@ class _BotChatState extends State<BotChat> {
                   )
                 : Text(
                     widget._message[widget.i],
+                    style: const TextStyle(fontSize: 18),
                     maxLines: 2,
                     overflow: TextOverflow.clip,
                   )),
