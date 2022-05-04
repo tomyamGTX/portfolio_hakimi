@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       providers: [ChangeNotifierProvider(create: (context) => HomeProvider())],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Portfolio Hakimi',
+        title: 'My Porfolio',
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),

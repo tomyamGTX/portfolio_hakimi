@@ -16,8 +16,34 @@ class BodyComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Align(
-          alignment: Alignment.center,
+        Container(
+          height: MediaQuery.of(context).size.height * 0.32,
+          decoration: const BoxDecoration(
+              color: Color(0xffdb817b),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp_mt8ktwFMueMTO6yKOcC0yDRvYoQzMLHpxuXKplm9Tp_l4uQWJdImdgT021kDX4OzyY&usqp=CAU'))),
+        ),
+        Positioned(
+          top: MediaQuery.of(context).size.height * 0.05,
+          left: MediaQuery.of(context).size.width * 0.6,
+          right: MediaQuery.of(context).size.width * 0.02,
+          child: GFImageOverlay(
+            color: Colors.white,
+            border: Border.all(color: Colors.white),
+            height: 400,
+            width: 400,
+            shape: BoxShape.circle,
+            image: const NetworkImage(
+                'https://firebasestorage.googleapis.com/v0/b/portfoliohakimi-b90b8.appspot.com/o/images%2Fkmi-removebg-preview.png?alt=media&token=ddcf4a26-5904-4136-84eb-6259bed2c22a',
+                scale: 1),
+            boxFit: BoxFit.fitWidth,
+          ),
+        ),
+        Positioned(
+          top: MediaQuery.of(context).size.height * 0.36,
+          left: MediaQuery.of(context).size.width * 0.05,
           child: Container(
               width: MediaQuery.of(context).size.width * 0.8,
               child: AnimatedTextKit(
@@ -38,27 +64,13 @@ class BodyComponent extends StatelessWidget {
               )),
         ),
         Positioned(
-          top: MediaQuery.of(context).size.height * 0.15,
-          left: MediaQuery.of(context).size.width * 0.6,
-          right: MediaQuery.of(context).size.width * 0.01,
-          child: const GFImageOverlay(
-            height: 400,
-            width: 400,
-            shape: BoxShape.circle,
-            image: NetworkImage(
-                'https://firebasestorage.googleapis.com/v0/b/portfoliohakimi-b90b8.appspot.com/o/images%2Fkmi-removebg-preview.png?alt=media&token=ddcf4a26-5904-4136-84eb-6259bed2c22a',
-                scale: 1),
-            boxFit: BoxFit.fitWidth,
-          ),
-        ),
-        Positioned(
-          top: MediaQuery.of(context).size.height * 0.55,
-          left: MediaQuery.of(context).size.width * 0.1,
+          top: MediaQuery.of(context).size.height * 0.46,
+          left: MediaQuery.of(context).size.width * 0.05,
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.55,
             child: DefaultTextStyle(
               style: const TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 26.0,
                   fontFamily: 'Bobbers',
                   color: Colors.lightBlueAccent),
               child: AnimatedTextKit(
@@ -72,7 +84,7 @@ class BodyComponent extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }
