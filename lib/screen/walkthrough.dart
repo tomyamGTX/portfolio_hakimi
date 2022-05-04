@@ -80,7 +80,7 @@ class _WalkThroughState extends State<WalkThrough> {
                 index = i;
               });
 
-              _contoller.animateToPage(int.parse('$i'),
+              _contoller.animateToPage(int.parse('$i'.substring(0,1)),
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);
             },
@@ -96,7 +96,7 @@ class _WalkThroughState extends State<WalkThrough> {
               setState(() {
                 if (index < 2) index++;
               });
-              _contoller.animateToPage(int.parse('$index'),
+              _contoller.animateToPage(int.parse('$index'.substring(0,1)),
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);
             },
@@ -115,6 +115,5 @@ class _WalkThroughState extends State<WalkThrough> {
     setState(() {
       url = urls;
     });
-    print(url);
   }
 }

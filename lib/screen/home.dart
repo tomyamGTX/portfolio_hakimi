@@ -48,7 +48,7 @@ class BodyComponent extends StatelessWidget {
             image: NetworkImage(
                 'https://firebasestorage.googleapis.com/v0/b/portfoliohakimi-b90b8.appspot.com/o/images%2Fkmi-removebg-preview.png?alt=media&token=ddcf4a26-5904-4136-84eb-6259bed2c22a',
                 scale: 1),
-            boxFit: BoxFit.cover,
+            boxFit: BoxFit.fitWidth,
           ),
         ),
         Positioned(
