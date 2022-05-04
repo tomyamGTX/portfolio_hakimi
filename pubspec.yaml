@@ -34,7 +34,7 @@ dependencies:
   dots_indicator: ^2.1.0
   loading_animation_widget: ^1.1.0+5
   animated_text_kit: ^4.2.1
-
+  fluttertoast: ^8.0.9
   #state_management
   provider:
 
