@@ -55,7 +55,7 @@ class BodyComponent extends StatelessWidget {
           top: MediaQuery.of(context).size.height * 0.55,
           left: MediaQuery.of(context).size.width * 0.1,
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.8,
+            width: MediaQuery.of(context).size.width * 0.5,
             child: DefaultTextStyle(
               style: const TextStyle(
                   fontSize: 30.0,
