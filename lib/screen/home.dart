@@ -38,15 +38,16 @@ class BodyComponent extends StatelessWidget {
               )),
         ),
         Positioned(
-          top: MediaQuery.of(context).size.height * 0.22,
+          top: MediaQuery.of(context).size.height * 0.15,
           left: MediaQuery.of(context).size.width * 0.6,
           right: 100,
           child: const GFImageOverlay(
-            height: 300,
+            height: 400,
             width: 400,
             shape: BoxShape.circle,
             image: NetworkImage(
-                'https://firebasestorage.googleapis.com/v0/b/portfoliohakimi-b90b8.appspot.com/o/images%2Fkmi-removebg-preview.png?alt=media&token=ddcf4a26-5904-4136-84eb-6259bed2c22a'),
+                'https://firebasestorage.googleapis.com/v0/b/portfoliohakimi-b90b8.appspot.com/o/images%2Fkmi-removebg-preview.png?alt=media&token=ddcf4a26-5904-4136-84eb-6259bed2c22a',
+                scale: 1),
             boxFit: BoxFit.cover,
           ),
         ),
