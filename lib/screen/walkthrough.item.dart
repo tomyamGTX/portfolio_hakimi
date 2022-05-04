@@ -22,7 +22,7 @@ class WalkThroughItem extends StatelessWidget {
           height: 200,
           width: 200,
           shape: BoxShape.circle,
-          image: NetworkImage(url),
+          image: NetworkImage(url.replaceAll('///', '//')),
           boxFit: BoxFit.cover,
         ),
         const SizedBox(
