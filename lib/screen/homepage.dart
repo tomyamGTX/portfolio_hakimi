@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                         style: boldTextStyle(size: 32),
                       ),
                       subtitle: AutoSizeText(
-                        'My name is Mohamad Hakimi Bin Mohamad Noor. I am $age years old and live in Alor Setar, Kedah, Malaysia. Currently I work as Project Manager at AQ Wise SDN. BHD. I expertise in Dart, PHP, and some basic at Java language. Familiar with Flutter ,GitHub, Firebase and Wordpress.',
+                        'My name is Mohamad Hakimi Bin Mohamad Noor. I am $age years old and live in Alor Setar, Kedah, Malaysia. Currently I work as Project Manager at AQ Wise SDN. BHD. I expertise in Dart, PHP, and some basic at Java language. Familiar with Flutter, GitHub, Firebase and Wordpress.',
                         style: primaryTextStyle(size: 24),
                         textAlign: TextAlign.justify,
                         maxLines: 10,
