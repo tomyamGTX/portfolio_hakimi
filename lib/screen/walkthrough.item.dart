@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:getwidget/components/image/gf_image_overlay.dart';
+import 'package:lottie/lottie.dart';
 
 class WalkThroughItem extends StatelessWidget {
   final String title;
   final String subtitle;
   final String url;
+  final bool isAsset;
 
   const WalkThroughItem({
     required this.title,
     required this.subtitle,
     required this.url,
+    required this.isAsset,
     Key? key,
   }) : super(key: key);
 
@@ -18,26 +20,23 @@ class WalkThroughItem extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        GFImageOverlay(
-          height: 200,
-          width: 200,
-          shape: BoxShape.circle,
-          image: NetworkImage(url.replaceAll('///', '//')),
-          boxFit: BoxFit.cover,
-        ),
+        Flexible(
+            child: isAsset
+                ? Lottie.asset(url, repeat: true)
+                : Lottie.network(url)),
         const SizedBox(
           height: 30,
         ),
         Text(
           title,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
         ),
         const SizedBox(
           height: 20,
         ),
         Text(
           subtitle,
-          style: const TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 20),
         ),
       ],
     );

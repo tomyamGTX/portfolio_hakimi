@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_hakimi/providers/home.provider.dart';
 import 'package:portfolio_hakimi/screen/splash.screen.dart';
 import 'package:provider/provider.dart';
@@ -34,6 +35,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'My Portfolio',
         theme: ThemeData(
+          textTheme: GoogleFonts.adventProTextTheme(),
+          useMaterial3: true,
           primarySwatch: Colors.red,
         ),
         home: const SplashScreen(),

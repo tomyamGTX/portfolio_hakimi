@@ -35,8 +35,18 @@ dependencies:
   loading_animation_widget: ^1.1.0+5
   animated_text_kit: ^4.2.1
   fluttertoast: ^8.0.9
+  nb_utils:
+  flutter_vector_icons:
+  change_app_package_name: ^1.1.0
+  auto_size_text:
   #state_management
   provider:
+
+  #animation
+  lottie:
+
+  #fonts
+  google_fonts:
 
   # firebase
   firebase_storage: ^10.2.15
@@ -51,6 +61,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   cloud_firestore: ^3.1.14
   flutter_launcher_name:
+
 
 flutter_launcher_name:
   name: "My Portfolio"
@@ -78,9 +89,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

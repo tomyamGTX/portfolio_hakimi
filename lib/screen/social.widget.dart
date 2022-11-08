@@ -30,7 +30,7 @@ class SocialWidgetState extends State<SocialWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: context.width(),
-      height: context.height() * 0.3,
+      height: MediaQuery.of(context).size.height * .2,
       color: Colors.black,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

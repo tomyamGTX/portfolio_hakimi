@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:portfolio_hakimi/constant.dart';
 import 'package:portfolio_hakimi/screen/walkthrough.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,17 +20,27 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     Timer(const Duration(seconds: 3), navigatoToWalk);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: LoadingAnimationWidget.staggeredDotsWave(
-        color: Theme.of(context).primaryColor,
-        size: 200,
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: LoadingAnimationWidget.staggeredDotsWave(
+              color: Theme.of(context).primaryColor,
+              size: 200,
+            ),
+          ),
+          Text(
+            'Loading My PortFolio ...',
+            style: headerStyle,
+          )
+        ],
       ),
     );
   }

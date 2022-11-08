@@ -41,21 +41,25 @@ class _WalkThroughState extends State<WalkThrough> {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.8,
       child: PageView(
-        children: [
+        children: const [
           WalkThroughItem(
+            isAsset: false,
             title: 'Welcome',
-            subtitle: 'This is the first screen',
-            url: url,
+            subtitle: 'Welcome to my portfolio',
+            url: 'https://assets7.lottiefiles.com/packages/lf20_puciaact.json',
           ),
           WalkThroughItem(
+            isAsset: true,
             title: 'This is my portfolio',
-            subtitle: 'This is the second screen',
-            url: url,
+            subtitle: 'This web app contains my detail and experiences',
+            url: 'assets/programmer.json',
           ),
           WalkThroughItem(
+            isAsset: false,
             title: 'Hope you like it',
-            subtitle: 'This is the third screen',
-            url: url,
+            subtitle:
+                'Feel free to contact me if you interested to hire me on your project',
+            url: 'https://assets7.lottiefiles.com/packages/lf20_cdfjcora.json',
           ),
         ],
         controller: _contoller,
@@ -80,7 +84,7 @@ class _WalkThroughState extends State<WalkThrough> {
                 index = i;
               });
 
-              _contoller.animateToPage(int.parse('$i'.substring(0,1)),
+              _contoller.animateToPage(int.parse('$i'.substring(0, 1)),
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);
             },
@@ -96,7 +100,7 @@ class _WalkThroughState extends State<WalkThrough> {
               setState(() {
                 if (index < 2) index++;
               });
-              _contoller.animateToPage(int.parse('$index'.substring(0,1)),
+              _contoller.animateToPage(int.parse('$index'.substring(0, 1)),
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);
             },
