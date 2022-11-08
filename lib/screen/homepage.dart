@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:portfolio_hakimi/constant.dart';
 import 'package:portfolio_hakimi/models/project.models.dart';
 import 'package:portfolio_hakimi/screen/social.widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -156,25 +155,29 @@ class _HomePageState extends State<HomePage> {
                         runAlignment: WrapAlignment.start,
                         runSpacing: 20,
                         children: _image
-                            .map((e) => MouseRegion(
-                                  cursor: SystemMouseCursors.click,
-                                  child: InkWell(
-                                    onTap: () => launchUrl(Uri.parse(e.link!)),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Chip(
-                                          backgroundColor: Colors
-                                              .primaries[e.colorIndex!]
-                                              .shade200,
-                                          label: Text(
+                            .map((e) => Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () =>
+                                          launchUrl(Uri.parse(e.link!)),
+                                      child: Chip(
+                                        backgroundColor: Colors
+                                            .primaries[e.colorIndex!].shade200,
+                                        label: TextButton(
+                                          onPressed: () =>
+                                              launchUrl(Uri.parse(e.link!)),
+                                          child: Text(
                                             e.name!,
-                                            style: labelStyle,
+                                            style: const TextStyle(
+                                                fontSize: 25,
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.white),
                                           ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ))
                             .toList(),
                       ),
