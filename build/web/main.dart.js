@@ -71327,7 +71327,7 @@ r=o.e
 r===$&&A.c()
 q=o.f
 p=A.ab(q).j("as<1,jD>")
-return new A.A7(A.akI(!0,A.a5T(n,new A.KJ(o.r,B.vn,A.pD(A.a([k,j,new A.dB(B.DT,new A.Hs(s,new A.uT("My name is Mohamad Hakimi Bin Mohamad Noor. I am "+r+" years old and live in Alor Setar, Kedah, Malaysia. Currently I work as Project Manager at AQ Wise SDN. BHD. I expertise in Dart, PHP, and some basic at Java language. Familiar with Flutter ,GitHub, Firebase and Wordpress.",A.ata(n,24),B.eA,10,n),n),n),B.wF,new A.ho(B.l7,n,n,new A.dB(B.ms,new A.Me(B.wq,20,B.wq,20,A.am(new A.as(q,new A.adq(),p),!0,p.j("bk.E")),n),n),n),A.fv(n,m.a.a*0.1,n),new A.zk(n)],i),B.a6,B.cR,B.aj),n),l),B.ac,!0),o.gZv(),n)}}
+return new A.A7(A.akI(!0,A.a5T(n,new A.KJ(o.r,B.vn,A.pD(A.a([k,j,new A.dB(B.DT,new A.Hs(s,new A.uT("My name is Mohamad Hakimi Bin Mohamad Noor. I am "+r+" years old and live in Alor Setar, Kedah, Malaysia. Currently I work as Project Manager at AQ Wise SDN. BHD. I expertise in Dart, PHP, and some basic at Java language. Familiar with Flutter, GitHub, Firebase and Wordpress.",A.ata(n,24),B.eA,10,n),n),n),B.wF,new A.ho(B.l7,n,n,new A.dB(B.ms,new A.Me(B.wq,20,B.wq,20,A.am(new A.as(q,new A.adq(),p),!0,p.j("bk.E")),n),n),n),A.fv(n,m.a.a*0.1,n),new A.zk(n)],i),B.a6,B.cR,B.aj),n),l),B.ac,!0),o.gZv(),n)}}
 A.adn.prototype={
 $0(){var s=A.HH(new A.adm(),null,t.z)
 return A.Ia(this.a).v_(s)},
