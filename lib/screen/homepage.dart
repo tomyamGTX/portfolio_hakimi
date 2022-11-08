@@ -156,20 +156,24 @@ class _HomePageState extends State<HomePage> {
                         runAlignment: WrapAlignment.start,
                         runSpacing: 20,
                         children: _image
-                            .map((e) => InkWell(
-                                  onTap: () => launchUrl(Uri.parse(e.link!)),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Chip(
-                                        backgroundColor: Colors
-                                            .primaries[e.colorIndex!].shade200,
-                                        label: Text(
-                                          e.name!,
-                                          style: labelStyle,
-                                        ),
-                                      )
-                                    ],
+                            .map((e) => MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: InkWell(
+                                    onTap: () => launchUrl(Uri.parse(e.link!)),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Chip(
+                                          backgroundColor: Colors
+                                              .primaries[e.colorIndex!]
+                                              .shade200,
+                                          label: Text(
+                                            e.name!,
+                                            style: labelStyle,
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ))
                             .toList(),
