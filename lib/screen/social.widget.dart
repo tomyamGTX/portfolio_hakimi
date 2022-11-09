@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -31,12 +32,13 @@ class SocialWidgetState extends State<SocialWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(19),
       width: context.width(),
-      height: MediaQuery.of(context).size.height * .2,
+      height: 200,
       color: Colors.black,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -78,10 +80,13 @@ class SocialWidgetState extends State<SocialWidget> {
           ).withWidth(context.width() * 0.8),
           const Divider(height: 50, color: Colors.white24, thickness: 1)
               .withWidth(context.width() * 0.9),
-          Text(
-              '© 2022 My Website. All rights reserved | Designed by Hakimi Mdnoor',
-              textAlign: TextAlign.center,
-              style: primaryTextStyle(color: Colors.white)),
+          Flexible(
+            child: AutoSizeText(
+                '© 2022 My Website. All rights reserved | Designed by Hakimi Mdnoor',
+                textAlign: TextAlign.center,
+                maxLines: 4,
+                style: primaryTextStyle(color: Colors.white)),
+          ),
         ],
       ),
     );

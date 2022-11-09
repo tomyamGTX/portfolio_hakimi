@@ -17,8 +17,9 @@ class WalkThroughItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Lottie.asset(url, repeat: true),
+        Flexible(child: Lottie.asset(url, repeat: true)),
         const SizedBox(
           height: 30,
         ),

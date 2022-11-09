@@ -41,6 +41,11 @@ class _WalkThroughState extends State<WalkThrough> {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.8,
       child: PageView(
+        onPageChanged: (v) {
+          setState(() {
+            index = v.toDouble();
+          });
+        },
         children: const [
           WalkThroughItem(
             title: 'Welcome',
