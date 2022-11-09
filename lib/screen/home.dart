@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/image/gf_image_overlay.dart';
 
@@ -44,7 +45,7 @@ class BodyComponent extends StatelessWidget {
         Positioned(
           top: MediaQuery.of(context).size.height * 0.36,
           left: MediaQuery.of(context).size.width * 0.05,
-          child: Container(
+          child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.8,
               child: AnimatedTextKit(
                 animatedTexts: [
@@ -79,7 +80,9 @@ class BodyComponent extends StatelessWidget {
                     TyperAnimatedText(subtitle[i]),
                 ],
                 onTap: () {
-                  print("Tap Event");
+                  if (kDebugMode) {
+                    print("Tap Event");
+                  }
                 },
               ),
             ),

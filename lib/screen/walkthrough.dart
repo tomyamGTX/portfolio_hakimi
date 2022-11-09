@@ -43,23 +43,20 @@ class _WalkThroughState extends State<WalkThrough> {
       child: PageView(
         children: const [
           WalkThroughItem(
-            isAsset: false,
             title: 'Welcome',
             subtitle: 'Welcome to my portfolio',
-            url: 'https://assets7.lottiefiles.com/packages/lf20_puciaact.json',
+            url: 'assets/welcome.json',
           ),
           WalkThroughItem(
-            isAsset: true,
             title: 'This is my portfolio',
             subtitle: 'This web app contains my detail and experiences',
             url: 'assets/programmer.json',
           ),
           WalkThroughItem(
-            isAsset: false,
             title: 'Hope you like it',
             subtitle:
                 'Feel free to contact me if you interested to hire me on your project',
-            url: 'https://assets7.lottiefiles.com/packages/lf20_cdfjcora.json',
+            url: 'assets/train.json',
           ),
         ],
         controller: _contoller,

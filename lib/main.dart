@@ -1,24 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_hakimi/providers/home.provider.dart';
 import 'package:portfolio_hakimi/screen/splash.screen.dart';
 import 'package:provider/provider.dart';
 
+import 'firebase_options.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: kIsWeb == true
-        ? const FirebaseOptions(
-            apiKey: "AIzaSyDawhAuDD5hvGc9u-9Gj4rfKh-_gCHXjIA",
-            authDomain: "portfoliohakimi-b90b8.firebaseapp.com",
-            projectId: "portfoliohakimi-b90b8",
-            storageBucket: "portfoliohakimi-b90b8.appspot.com",
-            messagingSenderId: "562408540515",
-            appId: "1:562408540515:web:6aabd229eabd49b871ab56",
-            measurementId: "G-0FRCCZY4JV")
-        : null,
+    options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());
 }

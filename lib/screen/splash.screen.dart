@@ -39,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Text(
             'Loading My PortFolio ...',
             style: headerStyle,
+            textAlign: TextAlign.center,
           )
         ],
       ),

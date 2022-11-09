@@ -6,6 +6,8 @@ import 'package:url_launcher/url_launcher.dart';
 class SocialWidget extends StatefulWidget {
   static String tag = '/SoicalScreen';
 
+  const SocialWidget({Key? key}) : super(key: key);
+
   @override
   SocialWidgetState createState() => SocialWidgetState();
 }

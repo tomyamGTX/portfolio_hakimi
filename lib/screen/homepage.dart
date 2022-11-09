@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                               'Home',
                               style: TextStyle(
                                   color: index == 0
-                                      ? Colors.tealAccent
+                                      ? Colors.yellow
                                       : Theme.of(context).secondaryHeaderColor,
                                   fontSize: 25),
                             )),
@@ -106,15 +106,14 @@ class _HomePageState extends State<HomePage> {
                               'Project Involve',
                               style: TextStyle(
                                   color: index == 1
-                                      ? Colors.tealAccent
+                                      ? Colors.yellow
                                       : Theme.of(context).secondaryHeaderColor,
                                   fontSize: 25),
                             )),
                       ],
                     ),
                   ),
-                  Lottie.network(
-                      'https://assets10.lottiefiles.com/packages/lf20_sy6jjyct.json'),
+                  Lottie.asset('assets/home.json'),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20.0, vertical: 16),
@@ -184,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: width * 0.1,
                   ),
-                  SocialWidget()
+                  const SocialWidget()
                 ]),
           ),
         ),

@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:portfolio_hakimi/screen/user.chat.dart';
+
 import 'bot.chat.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -127,8 +128,12 @@ class _ChatScreenState extends State<ChatScreen> {
         _chip = value['chip'];
       });
     });
-    print(_message);
-    print(_chip);
+    if (kDebugMode) {
+      print(_message);
+    }
+    if (kDebugMode) {
+      print(_chip);
+    }
   }
 
   String simplyFormat({required DateTime time, bool dateOnly = false}) {
