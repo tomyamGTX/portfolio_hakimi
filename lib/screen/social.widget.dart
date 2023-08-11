@@ -46,7 +46,7 @@ class SocialWidgetState extends State<SocialWidget> {
               const Icon(Entypo.facebook_with_circle,
                       size: 40, color: Colors.white)
                   .onTap(() {
-                launch('https://www.facebook.com/kimi.ezflutter');
+                launch('https://www.facebook.com/kimi.mdnoor.dev/');
               }),
               8.width,
               CircleAvatar(
@@ -67,14 +67,12 @@ class SocialWidgetState extends State<SocialWidget> {
               const Icon(Entypo.linkedin_with_circle,
                       size: 40, color: Colors.white)
                   .onTap(() {
-                launch(
-                    'https://www.linkedin.com/in/mohamad-hakimi-bin-mohamad-noor-11510720b/');
+                launch('https://www.linkedin.com/in/hakimi-mdnoor-11510720b/');
               }),
               8.width,
-              Icon(FontAwesome.youtube, size: 30, color: Colors.white)
+              const Icon(FontAwesome.youtube, size: 30, color: Colors.white)
                   .onTap(() {
-                launch(
-                    'https://www.youtube.com/channel/UC5yL4ttlwmmSYc78fpT7eEw');
+                launch('https://www.youtube.com/@hakimimdnoor5634/videos');
               }),
             ],
           ).withWidth(context.width() * 0.8),
